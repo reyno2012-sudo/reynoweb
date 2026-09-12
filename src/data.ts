@@ -1,5 +1,8 @@
 import { NavigationItem, WorkbenchTool, SelectedProject, FloppyProject, NoteArticle } from './types';
 
+const REYNO_GITHUB = 'https://github.com/reyno2012-sudo';
+const REYNO_PODCAST = 'https://qjr6h2amuu.feishu.cn/wiki/W41nwmUtoiMDtpkOFMdckS0jnQd?fromScene=spaceOverview';
+
 export const NAVIGATION_ITEMS: NavigationItem[] = [
   { label: '/INDEX', href: '#top' },
   { label: '/PROFILE', href: '#profile' },
@@ -32,7 +35,7 @@ export const SELECTED_PROJECTS: SelectedProject[] = [
     image: '/works/milestone.jpg',
     status: 'PRIVATE',
     tags: 'Product thinking · Full-stack · Self-hosted',
-    url: 'https://milestone.jintao.co.uk/',
+    url: REYNO_GITHUB,
   },
   {
     id: 'reader',
@@ -43,7 +46,7 @@ export const SELECTED_PROJECTS: SelectedProject[] = [
     image: '/works/reader.jpg',
     status: 'OPEN',
     tags: 'Data workflow · AI curation · Publishing',
-    url: 'https://reader.jintao.co.uk/',
+    url: REYNO_GITHUB,
   },
   {
     id: 'prompt-notebook',
@@ -54,7 +57,7 @@ export const SELECTED_PROJECTS: SelectedProject[] = [
     image: '/works/prompt.jpg',
     status: 'OPEN',
     tags: 'Frontend craft · AI imaging · Workflow',
-    url: 'https://prompt.jintao.co.uk/',
+    url: REYNO_GITHUB,
   },
   {
     id: 'aihub',
@@ -65,7 +68,7 @@ export const SELECTED_PROJECTS: SelectedProject[] = [
     image: '/works/aihub.jpg',
     status: 'PRIVATE',
     tags: 'AI integration · Product delivery · Operations',
-    url: 'https://aihub.jintao.co.uk/',
+    url: REYNO_GITHUB,
   },
   {
     id: 'gallery',
@@ -76,7 +79,7 @@ export const SELECTED_PROJECTS: SelectedProject[] = [
     image: '/works/gallery.jpg',
     status: 'OPEN',
     tags: 'Visual system · Self-hosting · Curation',
-    url: 'https://gallery.jintao.co.uk/',
+    url: REYNO_GITHUB,
   },
   {
     id: 'note-os',
@@ -87,7 +90,7 @@ export const SELECTED_PROJECTS: SelectedProject[] = [
     image: '/uploads/projects/907f27b26657c9534071e4fa65c5eb1e8eb6d86b533d4f0b687a610b8f90ce46.png',
     status: 'OPEN',
     tags: 'Product · Design · Engineering',
-    url: 'https://note.jintao.co.uk/',
+    url: REYNO_GITHUB,
   },
   {
     id: 'acks-watermarker',
@@ -98,7 +101,7 @@ export const SELECTED_PROJECTS: SelectedProject[] = [
     image: '/works/acks-watermarker.png',
     status: 'OPEN',
     tags: 'Canvas · Local-first · Batch export',
-    url: 'https://jintao.co.uk/watermark',
+    url: REYNO_GITHUB,
   },
 ];
 
@@ -107,7 +110,7 @@ export const FLOPPY_PROJECTS: FloppyProject[] = [
     id: 'acks-watermarker-repo',
     name: 'ACKS-Watermarker',
     summary: '浏览器端图片水印工作室，支持图文水印、拖拽编辑、批处理、本地修复、抠图与隐私友好导出。',
-    repositoryUrl: 'https://github.com/shynloc/ACKS-Watermarker',
+    repositoryUrl: REYNO_GITHUB,
     stack: 'HTML5 · JavaScript · Canvas API',
     platform: 'Web · Browser-local',
     version: 'MAIN',
@@ -118,7 +121,7 @@ export const FLOPPY_PROJECTS: FloppyProject[] = [
     id: 'prompt-notebook-repo',
     name: 'Prompt Notebook',
     summary: '自托管的视觉 Prompt 笔记本，支持加密保存 AI 与图床设置。',
-    repositoryUrl: 'https://github.com/shynloc/prompt-notebook',
+    repositoryUrl: REYNO_GITHUB,
     stack: 'TypeScript · React',
     platform: 'Web · Self-hosted',
     version: 'v1.4.1',
@@ -129,7 +132,7 @@ export const FLOPPY_PROJECTS: FloppyProject[] = [
     id: 'r2-local-pic-manager',
     name: 'R2 Local Pic Manager',
     summary: '基于 Cloudflare R2 与 Worker 的本地图床管理器。',
-    repositoryUrl: 'https://github.com/shynloc/CloudFlare-R2-LocalPicManager',
+    repositoryUrl: REYNO_GITHUB,
     stack: 'HTML · Cloudflare Worker',
     platform: 'Web · Cloudflare',
     version: 'v1.0.0',
@@ -140,7 +143,7 @@ export const FLOPPY_PROJECTS: FloppyProject[] = [
     id: 'hermes-office-suite',
     name: 'Hermes Office Suite',
     summary: '面向 Hermes Agent 的中文办公自动化技能套件，覆盖 Word、Excel、PDF 与 PPT。',
-    repositoryUrl: 'https://github.com/shynloc/Hermes-Easy-Office-Suite',
+    repositoryUrl: REYNO_GITHUB,
     stack: 'Python · Automation',
     platform: 'Agent Skill',
     version: 'v1.0.0',
@@ -151,7 +154,7 @@ export const FLOPPY_PROJECTS: FloppyProject[] = [
     id: 'memos-web-clipper',
     name: 'Memos Web Clipper',
     summary: '把网页正文或选中文本以 Markdown 形式保存到自部署的 Memos。',
-    repositoryUrl: 'https://github.com/shynloc/memos-web-clipper',
+    repositoryUrl: REYNO_GITHUB,
     stack: 'JavaScript · Browser API',
     platform: 'Chrome Extension',
     version: 'MAIN',
@@ -162,7 +165,7 @@ export const FLOPPY_PROJECTS: FloppyProject[] = [
     id: 'acks-memos-mcp-server',
     name: 'ACKS Memos MCP',
     summary: '把自托管 Memos 连接到主流 AI 模型与 Agent 的 MCP 服务端。',
-    repositoryUrl: 'https://github.com/shynloc/acks-memos-mcp-server',
+    repositoryUrl: REYNO_GITHUB,
     stack: 'TypeScript · MCP',
     platform: 'Server · Docker',
     version: 'v1.0.1',
@@ -173,7 +176,7 @@ export const FLOPPY_PROJECTS: FloppyProject[] = [
     id: 'hermes-agent-qq-plugin',
     name: 'Hermes Agent QQ',
     summary: '适配 Hermes Agent 的 QQ 聊天插件，让 Agent 可以通过 QQ 进行沟通。',
-    repositoryUrl: 'https://github.com/shynloc/Hermes-Agent-QQ-Plugin',
+    repositoryUrl: REYNO_GITHUB,
     stack: 'Python · Agent Plugin',
     platform: 'Server · QQ',
     version: 'v1.2.1',
@@ -184,7 +187,7 @@ export const FLOPPY_PROJECTS: FloppyProject[] = [
     id: 'telegram-voice-skill',
     name: 'Telegram Voice Skill',
     summary: '帮助 AI 助手可靠发送 Telegram 语音消息的实战技能包。',
-    repositoryUrl: 'https://github.com/shynloc/telegram-voice-message-skill',
+    repositoryUrl: REYNO_GITHUB,
     stack: 'Shell · Telegram API',
     platform: 'Agent Skill',
     version: 'v1.0.0',
@@ -196,7 +199,7 @@ export const FLOPPY_PROJECTS: FloppyProject[] = [
 export const NOTE_ARTICLES: NoteArticle[] = [
   {
     id: 'note-611',
-    url: 'https://jintaoblog.com/posts/611.html',
+    url: REYNO_PODCAST,
     date: '2026-09-02',
     category: 'AI开发',
     readTime: 19,
@@ -210,7 +213,7 @@ export const NOTE_ARTICLES: NoteArticle[] = [
   },
   {
     id: 'note-598',
-    url: 'https://jintaoblog.com/posts/598.html',
+    url: REYNO_PODCAST,
     date: '2026-09-01',
     category: 'WORKS',
     readTime: 5,
@@ -221,7 +224,7 @@ export const NOTE_ARTICLES: NoteArticle[] = [
   },
   {
     id: 'note-590',
-    url: 'https://jintaoblog.com/posts/590.html',
+    url: REYNO_PODCAST,
     date: '2026-08-08',
     category: 'NOTES',
     readTime: 31,
@@ -233,7 +236,7 @@ export const NOTE_ARTICLES: NoteArticle[] = [
   },
   {
     id: 'note-589',
-    url: 'https://jintaoblog.com/posts/589.html',
+    url: REYNO_PODCAST,
     date: '2026-08-06',
     category: 'NOTES',
     readTime: 5,
@@ -244,7 +247,7 @@ export const NOTE_ARTICLES: NoteArticle[] = [
   },
   {
     id: 'note-585',
-    url: 'https://jintaoblog.com/posts/585.html',
+    url: REYNO_PODCAST,
     date: '2026-08-02',
     category: 'AI STUDY',
     readTime: 5,
@@ -255,7 +258,7 @@ export const NOTE_ARTICLES: NoteArticle[] = [
   },
   {
     id: 'note-584',
-    url: 'https://jintaoblog.com/posts/584.html',
+    url: REYNO_PODCAST,
     date: '2026-07-31',
     category: 'NOTES',
     readTime: 32,

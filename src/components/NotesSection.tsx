@@ -11,17 +11,17 @@ export const NotesSection: React.FC = () => {
         </div>
         <div className="notes-intro">
           <p>
-            进入朝夕见闻志，阅读我在思考、实验与记录的过程。
+            进入我的播客，收听我在思考、实验与记录的过程。
             <br />
             所有想法，都是通往更好作品的路径。
           </p>
           <a
             className="text-link"
-            href="https://jintaoblog.com/"
+            href="https://qjr6h2amuu.feishu.cn/wiki/W41nwmUtoiMDtpkOFMdckS0jnQd?fromScene=spaceOverview"
             target="_blank"
             rel="noreferrer"
           >
-            进入朝夕见闻志 <span aria-hidden="true">↗</span>
+            进入播客 <span aria-hidden="true">↗</span>
           </a>
         </div>
       </header>

@@ -20,39 +20,32 @@ export const FooterSection: React.FC = () => {
           <h2>Keep building. Keep a record.</h2>
           <div className="footer-links">
             <a
-              href="https://jintaoblog.com/"
+              href="https://qjr6h2amuu.feishu.cn/wiki/W41nwmUtoiMDtpkOFMdckS0jnQd?fromScene=spaceOverview"
               target="_blank"
               rel="noreferrer"
             >
-              Blog <span aria-hidden="true">↗</span>
+              Podcast <span aria-hidden="true">↗</span>
             </a>
             <a
-              href="https://github.com/shynloc/"
+              href="https://github.com/reyno2012-sudo"
               target="_blank"
               rel="noreferrer"
             >
               GitHub <span aria-hidden="true">↗</span>
             </a>
             <a
-              href="https://gallery.jintao.co.uk/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Gallery <span aria-hidden="true">↗</span>
-            </a>
-            <a
-              href="https://x.com/shynloc"
+              href="https://x.com/reyno2"
               target="_blank"
               rel="noreferrer"
             >
               X <span aria-hidden="true">↗</span>
             </a>
             <a
-              href="https://bsky.app/profile/jintaoblog.com"
+              href="https://t.me/reyno007"
               target="_blank"
               rel="noreferrer"
             >
-              Bluesky <span aria-hidden="true">↗</span>
+              Telegram <span aria-hidden="true">↗</span>
             </a>
           </div>
           <small>REYNO PERSONAL DOSSIER · 2026</small>

@@ -31,11 +31,11 @@ export const HeroSection: React.FC = () => {
             </a>
             <a
               className="stamp-button"
-              href="https://jintaoblog.com/"
+              href="https://qjr6h2amuu.feishu.cn/wiki/W41nwmUtoiMDtpkOFMdckS0jnQd?fromScene=spaceOverview"
               target="_blank"
               rel="noreferrer"
             >
-              阅读博客 <span aria-hidden="true">↗</span>
+              收听播客 <span aria-hidden="true">↗</span>
             </a>
           </div>
         </div>
