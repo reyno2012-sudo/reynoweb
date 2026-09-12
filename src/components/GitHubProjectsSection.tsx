@@ -68,12 +68,12 @@ export const GitHubProjectsSection: React.FC = () => {
     <section className="github-projects-section" id="github-projects">
       <header className="section-heading github-projects-heading">
         <div>
-          <p className="section-code">FILE 04 · OPEN CODE & REPOSITORIES</p>
-          <h2>软盘里的公开代码</h2>
+          <p className="section-code">FILE 04 · GITHUB PROJECTS</p>
+          <h2>公开构建，也公开演进</h2>
         </div>
         <div className="github-projects-intro">
-          <p>一些独立发布、自托管或面向 AI Agent 与工具链的公开代码仓库。</p>
-          <span>ARCHIVE / GITHUB PUBLIC REPOSITORIES</span>
+          <p>这里收录公开的代码、实验与持续维护的项目。拨动软盘，查看每一份可运行的记录。</p>
+          <span>PUBLIC REPOSITORIES · MANUALLY CURATED</span>
         </div>
       </header>
 
@@ -131,8 +131,7 @@ export const GitHubProjectsSection: React.FC = () => {
           <div className="floppy-stack">
             {visibleProjects.map((project, idx) => {
               const total = visibleProjects.length;
-              let offset = (idx - activeIndex + total) % total;
-              if (offset > total / 2) offset -= total;
+              const offset = idx - activeIndex;
 
               const absOffset = Math.abs(offset);
               const isActive = idx === activeIndex;

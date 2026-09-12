@@ -29,10 +29,10 @@ export default function App() {
               <span className="brand-emblem">
                 <img
                   className="brand-logo"
-                  src="/brand/shynloc-mark.webp"
-                  alt="Reyno"
-                  width={847}
-                  height={1080}
+                  src="/brand/reyno-eye-mark.png"
+                  alt="Reyno 眼睛标志"
+                  width={1536}
+                  height={1024}
                 />
               </span>
               <span className="brand-lcd">
