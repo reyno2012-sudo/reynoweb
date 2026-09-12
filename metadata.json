@@ -1,0 +1,6 @@
+{
+  "name": "Reyno",
+  "description": "Reyno 的个人主页与作品档案库 — 记录汽车行业经营与销售管理实践、AI Coding 作品与独立工具。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
