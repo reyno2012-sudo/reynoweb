@@ -7,6 +7,8 @@ export const CvRequestPanel: React.FC = () => {
   const titleId = useId();
   const descId = useId();
   const firstInputRef = useRef<HTMLInputElement>(null);
+  const dialogRef = useRef<HTMLElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -15,7 +17,23 @@ export const CvRequestPanel: React.FC = () => {
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
+        e.preventDefault();
         setIsOpen(false);
+      }
+      if (e.key === 'Tab') {
+        const items = dialogRef.current?.querySelectorAll<HTMLElement>(
+          'button:not(:disabled), input:not([tabindex="-1"]), select, textarea, a[href]'
+        );
+        if (!items?.length) return;
+        const first = items[0];
+        const last = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
       }
     };
 
@@ -26,6 +44,7 @@ export const CvRequestPanel: React.FC = () => {
       document.body.style.overflow = prevOverflow;
       window.removeEventListener('keydown', handleKeyDown);
       window.clearTimeout(timer);
+      triggerRef.current?.focus({ preventScroll: true });
     };
   }, [isOpen]);
 
@@ -43,9 +62,21 @@ export const CvRequestPanel: React.FC = () => {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    // Simulate sending network request
     try {
-      await new Promise((resolve) => setTimeout(resolve, 800));
+      const endpoint = import.meta.env.VITE_CV_REQUEST_ENDPOINT;
+      if (!endpoint) {
+        throw new Error('简历申请暂未开放，请通过页面底部的联系方式联系。');
+      }
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(Object.fromEntries(formData)),
+      });
+      if (!response.ok || !response.headers.get('content-type')?.includes('application/json')) {
+        throw new Error('请求未能送达，请稍后重试。');
+      }
+      const result = await response.json();
+      if (result.success !== true) throw new Error('请求未能送达，请稍后重试。');
       form.reset();
       setStatus('success');
     } catch (err) {
@@ -80,6 +111,7 @@ export const CvRequestPanel: React.FC = () => {
           </div>
         </dl>
         <button
+          ref={triggerRef}
           className="cv-request-button"
           type="button"
           onClick={() => {
@@ -102,6 +134,7 @@ export const CvRequestPanel: React.FC = () => {
           }}
         >
           <section
+            ref={dialogRef}
             className="cv-dialog"
             role="dialog"
             aria-modal="true"

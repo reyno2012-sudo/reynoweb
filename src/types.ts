@@ -28,7 +28,7 @@ export interface FloppyProject {
   stack: string;
   platform: string;
   version: string;
-  color: 'teal' | 'blue' | 'amber' | 'plum' | 'olive' | 'ivory';
+  color: 'teal' | 'blue' | 'amber' | 'plum' | 'olive' | 'ivory' | 'brick' | 'graphite';
   visible: boolean;
 }
 

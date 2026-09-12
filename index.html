@@ -3,6 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Apply the saved theme before first paint to avoid a light flash.
+      try {
+        const saved = localStorage.getItem('reyno-theme') || localStorage.getItem('jintao-theme');
+        document.documentElement.dataset.theme = saved === 'day' || saved === 'night'
+          ? saved
+          : matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'day';
+      } catch {
+        document.documentElement.dataset.theme = 'day';
+      }
+    </script>
     <title>Reyno — Personal Dossier</title>
     <meta name="description" content="Reyno 的个人主页，记录汽车行业经营与销售管理实践、AI Coding 作品与独立工具。" />
     <meta property="og:title" content="Reyno — Personal Dossier" />
